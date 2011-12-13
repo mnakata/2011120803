@@ -6,7 +6,7 @@ const int    N = 10000;
 const double p =     0.8;
 
 
-double bindist(int n, double p, int k)
+double binomdist(int n, double p, int k)
 {
   return
     exp(
@@ -24,7 +24,7 @@ int main(int argc, char** argv)
   double s = 0.0;
 
   for (int k = 0; k <= N; k ++)
-    s += bindist(N, p, k);
+    s += binomdist(N, p, k);
 
   std::cout << std::fixed << s << std::endl;
 }
